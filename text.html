@@ -6,13 +6,30 @@
 </head>
 <body>
 
+    <small id="date"></small>
+
     <h1>My Page Title</h1>
 
     <p>
         This is where your text goes. You can write anything you want here.
     </p>
 
-    <a href="index.html">Back to Home</a>
+    <a href="notes.html">Notes</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a href="index.html">Home</a>
+
+    <script>
+        const today = new Date();
+
+        const options = {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        };
+
+        document.getElementById("date").textContent =
+            today.toLocaleDateString("en-GB", options);
+    </script>
 
 </body>
 </html>
